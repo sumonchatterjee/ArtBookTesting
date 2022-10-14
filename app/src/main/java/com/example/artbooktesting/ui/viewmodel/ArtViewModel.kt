@@ -39,7 +39,7 @@ class ArtViewModel@Inject constructor(
         insertArtMsg = MutableLiveData<Resource<Art>>()
     }
 
-    fun setSelectedArtMsg(url:String){
+    fun setSelectedImage(url:String){
         selectedImages.postValue(url)
     }
 
@@ -81,7 +81,7 @@ class ArtViewModel@Inject constructor(
 
         val art = Art(name,artistName,yearInt,selectedImages.value ?: "")
         insertArt(art)
-        setSelectedArtMsg("")
+        setSelectedImage("")
         insertArtMsg.postValue(Resource.success(art))
 
     }
