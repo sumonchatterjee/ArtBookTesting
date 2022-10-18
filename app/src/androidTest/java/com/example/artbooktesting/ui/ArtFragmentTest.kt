@@ -34,7 +34,7 @@ class ArtFragmentTest {
 
 
     @Test
-    fun `testNavigation-from-art-to-artdetails`(){
+    fun `testNavigation-from-art-fragment-to-art-details-fragment`(){
 
         val navController = Mockito.mock(NavController::class.java)
         launchFragmentInHiltContainer<ArtFragment>(
